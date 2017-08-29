@@ -1,5 +1,5 @@
 #!/bin/bash
-# this script must be executed as root
+# this script must be run as root
 
 # create red and blue network namespace
 ip netns add red
