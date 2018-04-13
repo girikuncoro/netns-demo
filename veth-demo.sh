@@ -35,15 +35,18 @@ ip netns exec red ping localhost
 ip netns exec red ip link set dev eth0-r up
 ip netns exec red ip address add 10.0.0.1/24 dev eth0-r
 
-# check red namespace has default route
+# check red namespace has route via eth0-r
 ip netns exec red ip route
+
+# root namespace doesnt aware of 10.0.0.0/24 network
+ip route
 
 # bring up same thing in blue namespace
 ip netns exec blue ip link set dev lo up
 ip netns exec blue ip link set dev eth0-b up
 ip netns exec blue ip address add 10.0.0.2/24 dev eth0-b
 
-# check blue namespace has default route
+# check blue namespace has route via eth0-b
 ip netns exec blue ip route
 
 # test pinging blue from red namespace
