@@ -1,5 +1,7 @@
 #!/bin/bash
-# this script must be run as root
+# each command must be run as root, try to run manually each command. 
+# we would like to demonstrate each network namespace has its own network 
+# interfaces, routing table, and arp table.
 
 # create red and blue network namespace.
 ip netns add red

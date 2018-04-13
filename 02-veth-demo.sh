@@ -1,5 +1,6 @@
 #!/bin/bash
-# this script must be run as root
+# each command must be run as root, try to run manually each command. we would like to
+# see connectivity between 2 different network namespaces via ovs bridge.
 
 # create ovs bridge in root namespace. this will be used to connect red and blue namespaces.
 ovs-vsctl add-br ovs1
