@@ -1,12 +1,15 @@
 #!/bin/bash
 # this script must be run as root
 
-# create red and blue network namespace
+# create red and blue network namespace.
 ip netns add red
 ip netns add blue
 
-# list network namespace
+# list network namespace, verify that we know have 2 network namespaces: red and blue.
 ip netns list
+
+# netns will record namespaces in /var/run/netns. /var/run is usually used to
+# store run-time variable data, including namespaces.
 ls /var/run/netns
 
 # root namespace, red, and blue
