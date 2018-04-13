@@ -49,5 +49,5 @@ ip netns exec red dhclient eth0-r
 ip netns exec red ip address
 
 # run dhcp client in blue namespace
-ip netns exec blue dhclient eht0-b
+ip netns exec blue dhclient eth0-b
 ip netns exec blue ip address
